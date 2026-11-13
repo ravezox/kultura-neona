@@ -152,15 +152,46 @@
 /* Approved high-resolution Baby Barber artwork; fallback to previous asset until uploaded. */
 .directions .direction-card.neon{background-image:linear-gradient(90deg,transparent 0%,transparent 43%,#2b1b1580 49%,#2b1b15 56%),url('baby-barber-hq.webp'),url('baby-barber-original-art.webp');background-size:100% 100%,53% 100%,53% 100%;background-position:center,left center,left center;background-repeat:no-repeat}
 
-/* Lamp card only — reference composition with the actual photographed owl. */
-.directions .direction-card.lamps{background:radial-gradient(ellipse at 28% 46%,#ffe7bd 0%,#f4d0a9 48%,#e7b995 100%);background-image:url('lamp-card-trees.svg'),radial-gradient(ellipse at 28% 46%,#ffe7bd 0%,#f4d0a9 48%,#e7b995 100%);background-size:100% 100%,cover;background-position:center}
-.directions .direction-card.lamps:before{content:'';position:absolute;left:12%;top:12%;width:38%;height:auto;aspect-ratio:1;border-radius:50%;background-image:url('owl-real-card.webp');background-position:center 48%;background-size:137% auto;background-repeat:no-repeat;box-shadow:0 0 0 3px #f2d6b7,0 0 22px 7px #fff4ce,0 0 42px 16px #ffd68b;z-index:1;mask-image:none;-webkit-mask-image:none}
+/* Approved reference: lamp card only. Real owl, reduced scale, text to the right. */
+.directions .direction-card.lamps{
+  background-image:url('lamp-card-trees.svg'),radial-gradient(ellipse at 29% 46%,#ffe7bd 0%,#f4d0a9 49%,#e7b995 100%);
+  background-size:100% 100%,cover;
+  background-position:center;
+}
+.directions .direction-card.lamps:before{
+  content:'';position:absolute;left:10%;top:11%;width:40%;height:78%;
+  aspect-ratio:auto;border-radius:50%;
+  background-image:url('owl-real-card.webp');
+  background-position:center center;
+  background-size:100% auto;
+  background-repeat:no-repeat;
+  box-shadow:0 0 0 2px #f2d6b7,0 0 20px 6px #fff2ce,0 0 34px 12px #ffdc9c;
+  z-index:1;mask-image:none;-webkit-mask-image:none;
+}
 .directions .direction-card.lamps:after{display:none}
-.directions .direction-card.lamps .direction-copy{right:4%;top:12%;height:76%;width:40%;z-index:2}
-.directions .direction-card.lamps .direction-copy h3{font-family:'Nunito',sans-serif!important;font-weight:900!important;font-size:clamp(21px,2.2vw,32px)!important;line-height:1.06!important;letter-spacing:-.8px!important;margin:0 0 7%}
-.directions .direction-card.lamps .direction-copy p{font-family:'Nunito Sans',sans-serif;font-weight:500;font-size:clamp(13px,1.34vw,18px);line-height:1.27}
-.directions .direction-card.lamps .direction-copy .direction-link{margin-top:auto;background:#e56423;border:0;border-radius:999px;padding:11px 23px;font-family:'Nunito',sans-serif;font-size:clamp(13px,1.27vw,18px);font-weight:900}
-@media(max-width:760px){.directions .direction-card.lamps:before{left:10%;top:16%;width:39%}.directions .direction-card.lamps .direction-copy h3{font-size:clamp(20px,4.6vw,28px)!important}.directions .direction-card.lamps .direction-copy p{font-size:clamp(11px,3vw,15px)}}
+.directions .direction-card.lamps .direction-copy{
+  right:5%;top:12%;height:77%;width:39%;z-index:2;
+}
+.directions .direction-card.lamps .direction-copy h3{
+  font-family:'Nunito',sans-serif!important;
+  font-weight:900!important;font-size:clamp(22px,2.15vw,30px)!important;
+  line-height:1.06!important;letter-spacing:-1.2px!important;margin:0 0 12px;
+}
+.directions .direction-card.lamps .direction-copy p{
+  font-family:'Nunito Sans',sans-serif;font-weight:400;
+  font-size:clamp(14px,1.35vw,18px);line-height:1.3;letter-spacing:0;
+  margin:0 0 20px;
+}
+.directions .direction-card.lamps .direction-copy .direction-link{
+  background:#e56423;border:0;border-radius:999px;
+  padding:11px 23px;font-family:'Nunito',sans-serif;
+  font-size:clamp(13px,1.27vw,18px);font-weight:900;
+}
+@media(max-width:760px){
+  .directions .direction-card.lamps:before{left:8%;top:16%;width:41%;height:68%}
+  .directions .direction-card.lamps .direction-copy h3{font-size:clamp(19px,4.6vw,26px)!important}
+  .directions .direction-card.lamps .direction-copy p{font-size:clamp(11px,3vw,15px)}
+}
 
 /* Responsive hero only: reserved side columns keep images away from text.
    At 1920px display with 150% OS scaling, CSS viewport may be ~1280px. */
