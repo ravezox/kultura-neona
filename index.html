@@ -162,29 +162,21 @@
 .directions .direction-card.lamps .direction-copy .direction-link{margin-top:auto;background:#e56423;border:0;border-radius:999px;padding:11px 23px;font-family:'Nunito',sans-serif;font-size:clamp(13px,1.27vw,18px);font-weight:900}
 @media(max-width:760px){.directions .direction-card.lamps:before{left:10%;top:16%;width:39%}.directions .direction-card.lamps .direction-copy h3{font-size:clamp(20px,4.6vw,28px)!important}.directions .direction-card.lamps .direction-copy p{font-size:clamp(11px,3vw,15px)}}
 
-/* Laptop responsiveness: preserve the approved photo masks and visual design.
-   At narrower desktop widths, move the hero photos inward gradually. */
-@media (min-width:761px) and (max-width:1350px){
-  .hero{padding-left:clamp(250px,29%,390px);padding-right:clamp(250px,29%,390px)}
-  .hero .left-photo{left:clamp(0px,calc((1350px - 100vw)*.10),48px);width:clamp(215px,23.5vw,307px)}
-  .hero .right-photo{right:clamp(0px,calc((1350px - 100vw)*.10),48px);width:clamp(225px,25vw,328px)}
+/* Responsive hero only: reserved side columns keep images away from text.
+   At 1920px display with 150% OS scaling, CSS viewport may be ~1280px. */
+@media (min-width:761px) and (max-width:1400px){
+  .hero{padding-left:28%;padding-right:28%}
+  .hero .left-photo{left:clamp(0px,3vw,42px);width:min(23%,270px)}
+  .hero .right-photo{right:clamp(0px,3vw,42px);width:min(24%,285px)}
 }
 @media (min-width:761px) and (max-width:950px){
-  .hero{padding-left:26%;padding-right:26%}
+  .hero{padding-left:27%;padding-right:27%}
+  .hero .left-photo{left:0;width:23%}
+  .hero .right-photo{right:0;width:24%}
   .hero h1{font-size:clamp(32px,4.2vw,42px)}
   .hero p{font-size:17px}
   .hero-actions{gap:7px}
   .hero-actions .cta{padding:10px 9px;font-size:11px}
-}
-
-/* Stronger visible laptop composition correction, hero only. */
-@media (min-width:951px) and (max-width:1400px){
-  .hero .left-photo{left:clamp(12px,calc((1400px - 100vw)*.30 + 12px),105px);width:clamp(225px,24vw,307px)}
-  .hero .right-photo{right:clamp(12px,calc((1400px - 100vw)*.30 + 12px),105px);width:clamp(235px,25.5vw,328px)}
-}
-@media (min-width:761px) and (max-width:950px){
-  .hero .left-photo{left:24px;width:clamp(190px,23vw,220px)}
-  .hero .right-photo{right:24px;width:clamp(200px,24vw,230px)}
 }
 </style></head><body><svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute;overflow:hidden" aria-hidden="true"><defs>
 <clipPath id="coffee-blob" clipPathUnits="objectBoundingBox"><path d="M 0,0.005 C .19,.008 .38,.018 .56,.022 C .76,.024 .89,.08 .956,.205 C 1.01,.315 1.005,.52 .949,.648 C .893,.781 .769,.873 .601,.917 C .42,.97 .284,1.02 .127,.992 C .073,.985 .029,.969 0,.95 Z"/></clipPath>
