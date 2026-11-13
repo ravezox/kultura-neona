@@ -221,63 +221,55 @@
 .directions .direction-card.lamps:before{left:4%;top:0;width:51%;height:100%;aspect-ratio:auto;border-radius:0;background-image:url('owl-illustrated.svg');background-position:center;background-size:contain;box-shadow:none}
 @media(max-width:760px){.directions .direction-card.lamps:before{left:2%;top:0;width:52%;height:100%}}
 
-/* Approved owl card artwork. Enabled only after the high-quality asset loads. */
-.directions .direction-card.lamps.owl-approved{background:#f4d2af url('owl-lamps-approved.webp') center/100% 100% no-repeat!important}
-.directions .direction-card.lamps.owl-approved:before,.directions .direction-card.lamps.owl-approved:after{display:none!important}
-.directions .direction-card.lamps.owl-approved .direction-copy{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;z-index:3!important;pointer-events:none}
-.directions .direction-card.lamps.owl-approved .direction-copy h3,.directions .direction-card.lamps.owl-approved .direction-copy p{visibility:hidden!important}
-.directions .direction-card.lamps.owl-approved .direction-copy .direction-link{
-  position:absolute!important;left:51%!important;top:70%!important;width:27%!important;height:14%!important;
-  margin:0!important;padding:0!important;opacity:0!important;pointer-events:auto!important;cursor:pointer!important
+/* Owl card: image is decorative only; all words are selectable HTML. */
+.directions .direction-card.lamps.owl-approved{
+  background:#f5d5b6 url('owl-lamps-background.webp') center center/100% 100% no-repeat!important;
 }
-
-/* Real selectable SEO text on the approved owl background.
-   Cover only the baked-in right-hand lettering; preserve illustrated owl. */
-.directions .direction-card.lamps.owl-approved:after{
-  content:"";display:block!important;position:absolute;z-index:1;
-  top:0;bottom:0;left:49%;right:0;pointer-events:none;
-  background:linear-gradient(105deg,#f8d5b4 0%,#f8d7b8 40%,#f9d9bb 100%);
-}
+.directions .direction-card.lamps.owl-approved:before,
+.directions .direction-card.lamps.owl-approved:after{display:none!important}
 .directions .direction-card.lamps.owl-approved .direction-copy{
-  inset:0 0 0 auto!important;width:47%!important;height:100%!important;
+  position:absolute!important;inset:0 2% 0 auto!important;
+  width:46%!important;height:100%!important;z-index:3!important;
   display:flex;flex-direction:column;align-items:flex-start;justify-content:center;
-  padding:12px 16px 12px 0!important;pointer-events:none;
+  padding:12px 8px 12px 0!important;text-align:left;pointer-events:none;
 }
 .directions .direction-card.lamps.owl-approved .direction-copy h3{
-  visibility:visible!important;position:relative;display:block;
+  visibility:visible!important;display:block;position:relative;
   font-family:'Nunito',sans-serif!important;font-weight:900!important;
-  font-size:clamp(21px,2.3vw,31px)!important;line-height:1.04!important;
-  letter-spacing:-1.15px!important;margin:0 0 24px!important;
-  color:#2b1c14;
-}
-.directions .direction-card.lamps.owl-approved .direction-copy h3:before{
-  content:"";position:absolute;top:-9px;right:-18px;width:27px;height:29px;
-  background:linear-gradient(#f26b1c,#f26b1c) 2px 4px/4px 13px no-repeat,
-  linear-gradient(#f26b1c,#f26b1c) 15px 0/4px 13px no-repeat,
-  linear-gradient(#f26b1c,#f26b1c) 20px 19px/4px 13px no-repeat;
-  transform:rotate(30deg);border-radius:5px;
+  font-size:clamp(20px,2.1vw,30px)!important;line-height:1.05!important;
+  letter-spacing:-1px!important;color:#2a1a12!important;
+  margin:0 0 24px!important;
 }
 .directions .direction-card.lamps.owl-approved .direction-copy h3:after{
-  content:"";position:absolute;left:20%;right:5%;bottom:-12px;height:5px;
-  background:#ec641e;border-radius:100% 60% 80% 50%;transform:rotate(-2deg);
+  content:'';position:absolute;left:20%;right:4%;bottom:-12px;height:4px;
+  background:#ed641d;border-radius:60% 80% 70% 80%;transform:rotate(-2deg);
+}
+.directions .direction-card.lamps.owl-approved .direction-copy h3:before{
+  content:'';position:absolute;right:-27px;top:-13px;width:30px;height:29px;
+  background:linear-gradient(#f16a1c,#f16a1c) 4px 2px/4px 13px no-repeat,
+  linear-gradient(#f16a1c,#f16a1c) 16px 0/4px 13px no-repeat,
+  linear-gradient(#f16a1c,#f16a1c) 21px 18px/4px 12px no-repeat;
+  transform:rotate(35deg);
 }
 .directions .direction-card.lamps.owl-approved .direction-copy p{
   visibility:visible!important;font-family:'Nunito Sans',sans-serif!important;
-  font-size:clamp(13px,1.32vw,17px)!important;font-weight:500!important;
-  line-height:1.3!important;letter-spacing:0!important;
-  color:#342219;margin:0 0 16px!important;
+  font-weight:500!important;font-size:clamp(13px,1.27vw,17px)!important;
+  line-height:1.32!important;letter-spacing:0!important;
+  color:#342319!important;margin:0 0 17px!important;
 }
 .directions .direction-card.lamps.owl-approved .direction-copy .direction-link{
   position:relative!important;left:auto!important;top:auto!important;
   width:auto!important;height:auto!important;opacity:1!important;
-  padding:10px 22px!important;pointer-events:auto!important;
-  background:#ec651f!important;color:white!important;border-radius:30px!important;
-  font-family:'Nunito',sans-serif!important;font-size:15px!important;font-weight:900!important;
+  padding:10px 22px!important;margin:0!important;pointer-events:auto!important;
+  border-radius:999px!important;background:#ed651f!important;
+  color:white!important;font-family:'Nunito',sans-serif!important;
+  font-size:15px!important;font-weight:900!important;
 }
 @media(max-width:760px){
-  .directions .direction-card.lamps.owl-approved .direction-copy{width:47%!important;padding-right:7px!important}
-  .directions .direction-card.lamps.owl-approved .direction-copy h3{font-size:clamp(17px,4vw,24px)!important;margin-bottom:19px!important}
-  .directions .direction-card.lamps.owl-approved .direction-copy p{font-size:clamp(10px,2.6vw,14px)!important}
+  .directions .direction-card.lamps.owl-approved .direction-copy{width:46%!important;right:1%!important;padding-right:3px!important}
+  .directions .direction-card.lamps.owl-approved .direction-copy h3{font-size:clamp(16px,4vw,23px)!important;margin-bottom:18px!important}
+  .directions .direction-card.lamps.owl-approved .direction-copy h3:before{right:-15px;transform:rotate(35deg) scale(.7)}
+  .directions .direction-card.lamps.owl-approved .direction-copy p{font-size:clamp(10px,2.7vw,14px)!important}
   .directions .direction-card.lamps.owl-approved .direction-copy .direction-link{font-size:12px!important;padding:8px 12px!important}
 }
 </style></head><body><svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute;overflow:hidden" aria-hidden="true"><defs>
@@ -294,7 +286,7 @@ directionDialog.addEventListener('click',event=>{if(event.target===directionDial
 (function(){
   const owl = new Image();
   owl.onload = function(){ document.querySelector('.direction-card.lamps')?.classList.add('owl-approved'); };
-  owl.src = 'owl-lamps-approved.webp';
+  owl.src = 'owl-lamps-background.webp';
 })();
 </script>
 </body></html>
