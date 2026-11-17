@@ -223,7 +223,7 @@
 
 /* Owl card: image is decorative only; all words are selectable HTML. */
 .directions .direction-card.lamps.owl-approved{
-  background:#f5d5b6 url('owl-lamps-background.webp') center center/100% 100% no-repeat!important;
+  background:#f5d5b6 url('owl-lamps-cropped.webp') center center/100% 100% no-repeat!important;
 }
 .directions .direction-card.lamps.owl-approved:before,
 .directions .direction-card.lamps.owl-approved:after{display:none!important}
@@ -320,10 +320,10 @@
   width:.75em;height:.79em;color:#ed6019;overflow:visible;pointer-events:none;
 }
 
-/* Fill the owl card through its bottom edge; crop the light strip in the artwork. */
+/* Cropped source image fills the same card bounds without shifting the top edge. */
 .directions .direction-card.lamps.owl-approved{
-  background-size:105% 115%!important;
-  background-position:center top!important;
+  background-size:100% 100%!important;
+  background-position:center center!important;
 }
 </style></head><body><svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute;overflow:hidden" aria-hidden="true"><defs>
 <clipPath id="coffee-blob" clipPathUnits="objectBoundingBox"><path d="M 0,0.005 C .19,.008 .38,.018 .56,.022 C .76,.024 .89,.08 .956,.205 C 1.01,.315 1.005,.52 .949,.648 C .893,.781 .769,.873 .601,.917 C .42,.97 .284,1.02 .127,.992 C .073,.985 .029,.969 0,.95 Z"/></clipPath>
@@ -339,7 +339,7 @@ directionDialog.addEventListener('click',event=>{if(event.target===directionDial
 (function(){
   const owl = new Image();
   owl.onload = function(){ document.querySelector('.direction-card.lamps')?.classList.add('owl-approved'); };
-  owl.src = 'owl-lamps-background.webp';
+  owl.src = 'owl-lamps-cropped.webp';
 })();
 </script>
 </body></html>
