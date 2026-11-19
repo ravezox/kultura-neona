@@ -18,3 +18,18 @@ add_action('after_switch_theme', function () {
   } else { $id = $existing->ID; }
  }
 });
+
+/** Stable SKUs for the five existing lamp designs. */
+function kn_lamp_skus() {
+ return array('rabbit'=>'KN-RABBIT','lion'=>'KN-LION','owl'=>'KN-OWL','cloud'=>'KN-CLOUD','rocket'=>'KN-ROCKET');
+}
+function kn_lamp_add_to_cart_url($slug) {
+ if (!function_exists('wc_get_product_id_by_sku') || !function_exists('wc_get_cart_url')) return '';
+ $skus=kn_lamp_skus();
+ if (!isset($skus[$slug])) return '';
+ $id=wc_get_product_id_by_sku($skus[$slug]);
+ if (!$id) return '';
+ $product=wc_get_product($id);
+ if (!$product || !$product->is_visible() || !$product->is_purchasable() || !$product->is_in_stock() || !$product->is_type('simple')) return '';
+ return add_query_arg('add-to-cart',$id,wc_get_cart_url());
+}
