@@ -7,3 +7,30 @@ Version: 0.1.0
 Text Domain: kultura-neona
 Requires PHP: 7.4
 */
+
+/* WooCommerce cart and checkout — Культура Неона */
+body.woocommerce-cart,body.woocommerce-checkout{background:#fff5eb;color:#30211b}
+body.woocommerce-cart .wp-site-blocks,body.woocommerce-checkout .wp-site-blocks{background:#fff5eb}
+body.woocommerce-cart .entry-content,body.woocommerce-checkout .entry-content,
+body.woocommerce-cart .wp-block-post-content,body.woocommerce-checkout .wp-block-post-content{max-width:1200px;margin:0 auto;padding:40px 22px 80px}
+body.woocommerce-cart h1,body.woocommerce-checkout h1,
+body.woocommerce-cart .wp-block-post-title,body.woocommerce-checkout .wp-block-post-title{color:#30211b;font-weight:800;letter-spacing:-.025em}
+body.woocommerce-cart .wc-block-cart,body.woocommerce-checkout .wc-block-checkout{font-family:inherit;color:#30211b}
+body.woocommerce-cart .wc-block-cart__main,body.woocommerce-checkout .wc-block-checkout__main{min-width:0}
+body.woocommerce-cart .wc-block-components-sidebar,body.woocommerce-checkout .wc-block-components-sidebar{background:#fffaf5;border:1px solid #f0ddce;border-radius:22px;padding:22px}
+body.woocommerce-cart .wc-block-cart-items,body.woocommerce-checkout .wc-block-components-order-summary{background:#fffaf5;border-radius:18px}
+body.woocommerce-cart .wc-block-components-button,body.woocommerce-checkout .wc-block-components-button,
+body.woocommerce-cart .wc-block-cart__submit-button,body.woocommerce-checkout .wc-block-components-checkout-place-order-button{background:#f26916!important;border:1px solid #f26916!important;color:#fff!important;border-radius:999px!important;font-weight:750!important;box-shadow:0 7px 18px #e966142b;transition:background .2s,transform .2s}
+body.woocommerce-cart .wc-block-components-button:hover,body.woocommerce-checkout .wc-block-components-button:hover{background:#d9540a!important;transform:translateY(-1px)}
+body.woocommerce-cart a,body.woocommerce-checkout a{color:#cf5618}
+body.woocommerce-cart a:hover,body.woocommerce-checkout a:hover{color:#9d3d0c}
+body.woocommerce-cart .wc-block-components-text-input input,body.woocommerce-checkout .wc-block-components-text-input input,
+body.woocommerce-checkout .wc-block-components-combobox-control input{border-radius:12px!important;border-color:#e8d6c8!important;background:#fff!important}
+body.woocommerce-cart .wc-block-components-totals-coupon__form button{border-radius:12px!important}
+body.woocommerce-checkout .wc-block-checkout__shipping-method-container,
+body.woocommerce-checkout .wc-block-checkout__pickup-options{background:#fffaf5;border-radius:14px}
+body.woocommerce-checkout .wc-block-components-radio-control__option:has(input:checked){border-color:#ef752e}
+body.woocommerce-cart .wc-block-components-product-image img,body.woocommerce-checkout .wc-block-components-product-image img{border-radius:12px}
+@media(max-width:780px){body.woocommerce-cart .entry-content,body.woocommerce-checkout .entry-content,
+body.woocommerce-cart .wp-block-post-content,body.woocommerce-checkout .wp-block-post-content{padding:24px 14px 55px}
+body.woocommerce-cart .wc-block-components-sidebar,body.woocommerce-checkout .wc-block-components-sidebar{padding:16px;border-radius:16px}}
